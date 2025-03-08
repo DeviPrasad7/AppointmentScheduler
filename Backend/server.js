@@ -140,12 +140,6 @@ app.post("/api/book", async (req, res) => {
 
 app.delete("/api/cancel/:date/:time", async (req, res) => {
   try {
-    // console.log(
-    //   "Received PUT request for date:",
-    //   req.params.date,
-    //   "and time:",
-    //   req.params.time
-    // ); // Debugging line
 
     const { date, time } = req.params;
     const filter = { date: date, "updatedSlot.time": time };
